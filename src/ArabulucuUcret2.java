@@ -1,7 +1,5 @@
 import java.util.Scanner;
-/**
- * arabuluculukilk
- */
+
 public class ArabulucuUcret2 {
 
   public static void main(String[] args) {
