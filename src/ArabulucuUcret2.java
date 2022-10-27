@@ -4,16 +4,16 @@ public class ArabulucuUcret2 {
 
   public static void main(String[] args) {
     System.out.print("Anlaşma Miktarını Giriniz: ");
-    Scanner veri = new Scanner (System.in);
+    Scanner data = new Scanner (System.in);
 
-    int anlasmaMiktari = veri.nextInt();
+    int dealAmount = data.nextInt();
 
     double sonuc = 0;
 
-    if (anlasmaMiktari > 0) {  
+    if (dealAmount > 0) {  
 
       //--- eğer anlaşma miktarı 8.840.000 TL üzerindeyse --- 
-      if (anlasmaMiktari > 8840000){
+      if (dealAmount > 8840000){
         sonuc = (
                     (100000 * 0.06)
                   + (160000 * 0.05)
@@ -22,12 +22,12 @@ public class ArabulucuUcret2 {
                   + (1560000 * 0.02)
                   + (2080000 * 0.015)
                   + (4160000 * 0.01)
-                  + ((anlasmaMiktari - 8840000) * 0.005)
+                  + ((dealAmount - 8840000) * 0.005)
                 );
       }
 
       //--- (eğer anlaşma miktarı 4.680.000 TL'den büyük) ve (8.840.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 4680000 && anlasmaMiktari <= 8840000){
+      else if (dealAmount > 4680000 && dealAmount <= 8840000){
         sonuc = (  
                     (100000 * 0.06)
                   + (160000 * 0.05)
@@ -35,94 +35,94 @@ public class ArabulucuUcret2 {
                   + (520000 * 0.03)
                   + (1560000 * 0.02)
                   + (2080000 * 0.015)
-                  + ((anlasmaMiktari - 4680000) * 0.01)
+                  + ((dealAmount - 4680000) * 0.01)
                 );
       }
 
       //--- (eğer anlaşma miktarı 4.160.000 TL'den büyük) ve (4.680.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 4160000 && anlasmaMiktari <= 4680000){
+      else if (dealAmount > 4160000 && dealAmount <= 4680000){
         sonuc = (
                     (100000 * 0.06)
                   + (160000 * 0.05)
                   + (260000 * 0.04)
                   + (520000 * 0.03)
                   + (1560000 * 0.02)
-                  + ((anlasmaMiktari - 2600000) * 0.015)
+                  + ((dealAmount - 2600000) * 0.015)
                 );
       }
       //--- (eğer anlaşma miktarı 2.600.000 TL'den büyük) ve (4.160.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 2600000 && anlasmaMiktari <= 4160000){
+      else if (dealAmount > 2600000 && dealAmount <= 4160000){
         sonuc = (  
                     (100000 * 0.06)
                   + (160000 * 0.05)
                   + (260000 * 0.04)
                   + (520000 * 0.03)
                   + (1560000 * 0.02)
-                  + ((anlasmaMiktari - 2600000) * 0.015)
+                  + ((dealAmount - 2600000) * 0.015)
                 );
       }
 
       //--- (eğer anlaşma miktarı 1.560.000 TL'den büyük) ve (2.600.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 1560000 && anlasmaMiktari <= 2600000){
+      else if (dealAmount > 1560000 && dealAmount <= 2600000){
         sonuc = (  
                     (100000 * 0.06)
                   + (160000 * 0.05)
                   + (260000 * 0.04)
                   + (520000 * 0.03)
-                  + ((anlasmaMiktari - 1040000) * 0.02)
+                  + ((dealAmount - 1040000) * 0.02)
                 );
       }
 
       //--- (eğer anlaşma miktarı 1.040.000 TL'den büyük) ve (1.560.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 1040000 && anlasmaMiktari <= 1560000){
+      else if (dealAmount > 1040000 && dealAmount <= 1560000){
         sonuc = (  
                     (100000 * 0.06)
                   + (160000 * 0.05)
                   + (260000 * 0.04)
                   + (520000 * 0.03)
-                  + ((anlasmaMiktari - 1040000) * 0.02)
+                  + ((dealAmount - 1040000) * 0.02)
                 );
       }
 
       //--- (eğer anlaşma miktarı 520.000 TL'den büyük) ve (1.040.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 520000 && anlasmaMiktari <= 1040000){
+      else if (dealAmount > 520000 && dealAmount <= 1040000){
         sonuc = (  
                     (100000 * 0.06)
                   + (160000 * 0.05)
                   + (260000 * 0.04)
-                  + ((anlasmaMiktari - 520000) * 0.03)
+                  + ((dealAmount - 520000) * 0.03)
                 );
       }
       
       //--- (eğer anlaşma miktarı 260.000 TL'den büyük) ve (520.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 260000 && anlasmaMiktari <= 520000){
+      else if (dealAmount > 260000 && dealAmount <= 520000){
         sonuc = (
                     (100000 * 0.06)
                   + (160000 * 0.05)
-                  + ((anlasmaMiktari - 260000) * 0.04)
+                  + ((dealAmount - 260000) * 0.04)
                 );
       }
       
       //--- (eğer anlaşma miktarı 100.000 TL'den büyük) ve (260.000 TL'den küçük veya eşitse) --- 
-      else if (anlasmaMiktari > 100000 && anlasmaMiktari <= 260000) {
+      else if (dealAmount > 100000 && dealAmount <= 260000) {
 
         sonuc = (
                     (100000 * 0.06)
-                  + ((anlasmaMiktari - 100000) * 0.05)
+                  + ((dealAmount - 100000) * 0.05)
                 );
       }
 
       //--- eğer anlaşma miktarı 100.000 TL'den küçük veya eşitse --- 
-      else if (anlasmaMiktari <= 100000){
+      else if (dealAmount <= 100000){
 
-        sonuc = (anlasmaMiktari * 0.06);
+        sonuc = (dealAmount * 0.06);
         //--- eğer arabuluculuk ücreti hesaplama sonucu 1.600 TL'den küçükse --- 
         if (sonuc < 1600.0){
           sonuc = 1600.0;
         }
         //--- eğer arabuluculuk ücreti hesaplama sonucu 1.600 TL'den büyükse --- 
         else{
-          sonuc = (anlasmaMiktari * 0.06);
+          sonuc = (dealAmount * 0.06);
         }
            
       }
@@ -133,6 +133,6 @@ public class ArabulucuUcret2 {
     else {
       System.out.println("Geçersiz miktar girdiniz. (0'dan büyük olmalı.)");
     }
-    veri.close();
+    data.close();
   } 
 }
